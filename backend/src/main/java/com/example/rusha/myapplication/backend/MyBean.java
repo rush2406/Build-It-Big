@@ -1,17 +1,19 @@
 package com.example.rusha.myapplication.backend;
 
+import com.example.JokeTeller;
 /**
  * The object model for the data we are sending through endpoints
  */
 public class MyBean {
 
-    private String myData;
+    private JokeTeller jokeTeller;
 
-    public String getData() {
-        return myData;
+    public MyBean(){
+        jokeTeller = new JokeTeller();
     }
 
-    public void setData(String data) {
-        myData = data;
+    public String getJoke()
+    {
+        return jokeTeller.getJoke();
     }
 }
